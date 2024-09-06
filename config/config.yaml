@@ -1,0 +1,53 @@
+# config.yaml
+
+# Combine
+file_dir: "data"
+
+# Cluster Center
+n_cluster: 9
+leaf_label_col: "ImageID"
+response_color_cols: null
+weights: null
+qtl: null
+add_noise: true
+drop_duplicates: false
+plot_dendogram: true
+cluster_center_method: "random"
+do_clustering: false
+bins: 5
+
+# Run Experiment settings
+response_col: "EmotionF"
+n_samples: 1000
+alpha: 0.1
+sigf_col:
+  # - alpha_sigf
+  - "min_se_sigf"
+  - "ent(Y|x) < ent(Y)"
+not_pred_cols:
+  - "ImageID"
+  - "Filepath"
+  - "dataset" 
+  - "EmotionM"
+  - "EmotionF" 
+  - "headPose"
+  - "x_rotation" 
+  - "y_rotation"
+img_file_type:
+  - "jpg"
+  - "png"
+img_save_type: "png"
+spreadsheet_file_type: "xlsx"
+filter_response: false
+valid_response_list: null 
+verbose: false
+show_all_labels: false
+only_sigf: true
+generate_files_only: false
+do_summary: true
+n_clusters_row: 12
+n_clusters_col: 3
+recursion_limit: 1000000
+
+# Server
+max_workers: 20
